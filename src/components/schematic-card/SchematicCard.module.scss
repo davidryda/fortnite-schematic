@@ -1,0 +1,338 @@
+.cardFrame {
+    aspect-ratio: 31 / 50;
+    width: 100%;
+    max-width: 372px;
+    max-height: 600px;
+    position: relative;
+    display: flex;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(45deg,
+                #e9a668,
+                #744315,
+                #e9a668,
+                #744315,
+                #e9a668);
+        background-size: 200% 200%;
+        z-index: -1;
+        animation: holographic 10s linear infinite;
+    }
+}
+
+.cardContent {
+    width: 100%;
+    padding: calc(3.35% * 1);
+}
+
+.cardContentSchematicAttributes {
+    height: 80%;
+    width: 100%;
+    background-color: #e9a668;
+    position: relative;
+    overflow: hidden;
+
+    .sunburst {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .wedge {
+            position: absolute;
+            bottom: 0; // Adjust this to change the center point
+            left: 50%;
+            width: 200%; // Make sure it's large enough to cover the entire area
+            height: 250%;
+            transform-origin: 0% 100%;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+
+            &:nth-child(1) {
+                transform: rotate(-90deg);
+                background: linear-gradient(to bottom left, #613f21 35%, #aa6931 100%);
+            }
+
+            &:nth-child(2) {
+                transform: rotate(-75deg);
+                background: linear-gradient(to bottom left, #613f21 45%, #b97437 100%);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-60deg);
+                background: linear-gradient(to bottom left, #a26734 55%, #b97437 100%);
+            }
+
+            &:nth-child(4) {
+                transform: rotate(-45deg);
+                background: linear-gradient(to bottom left, #b67033 65%, #f5ae55 100%);
+            }
+
+            &:nth-child(5) {
+                transform: rotate(-30deg);
+                background: linear-gradient(to bottom left, #df8c34 75%, #ffff95 100%);
+            }
+
+            &:nth-child(6) {
+                transform: rotate(-15deg);
+                background: linear-gradient(to bottom left, #df8c34 70%, #ffffa2 100%);
+            }
+
+            &:nth-child(7) {
+                transform: rotate(0deg);
+                background: linear-gradient(to bottom left, #df8c34 70%, #ffffa2 100%);
+            }
+
+            &:nth-child(8) {
+                transform: rotate(15deg);
+                background: linear-gradient(to bottom left, #df8c34 75%, #ffff95 100%);
+            }
+
+            &:nth-child(9) {
+                transform: rotate(30deg);
+                background: linear-gradient(to bottom left, #b67033 65%, #f5ae55 100%);
+            }
+
+            &:nth-child(10) {
+                transform: rotate(45deg);
+                background: linear-gradient(to bottom left, #a26734 55%, #b97437 100%);
+            }
+
+            &:nth-child(11) {
+                transform: rotate(60deg);
+                background: linear-gradient(to bottom left, #613f21 45%, #b97437 100%);
+            }
+
+            &:nth-child(12) {
+                transform: rotate(75deg);
+                background: linear-gradient(to bottom left, #613f21 35%, #aa6931 100%);
+            }
+        }
+
+        .triangle1 {
+            position: absolute;
+            bottom: 0;
+            left: 7%;
+            width: 10%;
+            height: 10%;
+            clip-path: polygon(50% 70%, 0 100%, 100% 100%);
+            background-color: #fffe9d;
+            animation-name: zeroGravity1;
+            animation-duration: 20s;
+            // animation-delay: ;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform: rotate(130deg);
+        }
+
+        .triangle2 {
+            position: absolute;
+            bottom: 0;
+            left: 6.5%;
+            width: 15%;
+            height: 15%;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            background-color: #eb9d4c;
+            animation-name: zeroGravity2;
+            animation-duration: 20s;
+            // animation-delay: ;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform: rotate(130deg);
+        }
+
+        .triangle3 {
+            position: absolute;
+            bottom: 0;
+            left: 7%;
+            width: 13%;
+            height: 13%;
+            clip-path: polygon(50% 10%, 0 100%, 100% 100%);
+            background-color: #de6e21;
+            animation-name: zeroGravity3;
+            animation-duration: 30s;
+            // animation-delay: ;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform: rotate(245deg);
+        }
+
+        .triangle4 {
+            position: absolute;
+            bottom: 0;
+            left: 18%;
+            width: 15%;
+            height: 15%;
+            clip-path: polygon(50% 0, 15% 100%, 85% 100%);
+            background-color: #e47423;
+            animation-name: zeroGravity4;
+            animation-duration: 22s;
+            // animation-delay: ;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform: rotate(165deg);
+        }
+
+        .triangle5 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 25%;
+            height: 25%;
+            clip-path: polygon(50% 0, 10% 100%, 90% 100%);
+            background-color: #e2a656;
+            animation-name: zeroGravity5;
+            animation-duration: 25s;
+            // animation-delay: ;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform: rotate(50deg);
+        }
+
+        .triangle6 {
+            position: absolute;
+            bottom: 0;
+            left: 65%;
+            width: 20%;
+            height: 20%;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            background-color: #fffe97;
+            animation-name: zeroGravity6;
+            animation-duration: 24s;
+            // animation-delay: ;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform: rotate(130deg);
+        }
+
+        // .line {
+        //   position: absolute;
+        //   bottom: 0; // Center the base of the line at the bottom of the circle
+        //   left: 50%; // Center the line horizontally
+        //   transform-origin: bottom; // Rotate around the bottom center of the line
+        //   height: 100%; // Line extends upwards
+        //   width: 2px; // Line thickness
+        //   background-color: black;
+
+        //   &:nth-child(1) {
+        //     transform: rotate(-90deg);
+        //   }
+        //   &:nth-child(2) {
+        //     transform: rotate(-75deg);
+        //   }
+        //   &:nth-child(3) {
+        //     transform: rotate(-60deg);
+        //   }
+        //   &:nth-child(4) {
+        //     transform: rotate(-45deg);
+        //   }
+        //   &:nth-child(5) {
+        //     transform: rotate(-30deg);
+        //   }
+        //   &:nth-child(6) {
+        //     transform: rotate(-15deg);
+        //   }
+        //   &:nth-child(7) {
+        //     transform: rotate(0deg);
+        //   }
+        //   &:nth-child(8) {
+        //     transform: rotate(15deg);
+        //   }
+        //   &:nth-child(9) {
+        //     transform: rotate(30deg);
+        //   }
+        //   &:nth-child(10) {
+        //     transform: rotate(45deg);
+        //   }
+        //   &:nth-child(11) {
+        //     transform: rotate(60deg);
+        //   }
+        //   &:nth-child(12) {
+        //     transform: rotate(75deg);
+        //   }
+        //   &:nth-child(13) {
+        //     transform: rotate(90deg);
+        //   }
+        //   // Add more styles for additional lines
+        // }
+    }
+}
+
+.cardContentLevels {
+    height: 20%;
+    width: 100%;
+    background-color: #88613c;
+}
+
+@keyframes holographic {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+@keyframes zeroGravity1 {
+    from {
+        bottom: 0;
+    }
+
+    to {
+        bottom: 100%;
+    }
+}
+
+@keyframes zeroGravity2 {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 100%;
+    }
+}
+
+@keyframes zeroGravity3 {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 100%;
+    }
+}
+
+@keyframes zeroGravity4 {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 100%;
+    }
+}
+
+@keyframes zeroGravity5 {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 100%;
+    }
+}
+
+@keyframes zeroGravity6 {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 100%;
+    }
+}
