@@ -29,6 +29,18 @@
 .cardContent {
     width: 100%;
     padding: calc(3.35% * 1);
+    position: relative;
+}
+
+.schematicPowerLevelContainer {
+    position: absolute;
+    top: 1.3%;
+    left: 2%;
+    clip-path: polygon(0 0, 100% 0, 77% 100%, 0 100%);
+    height: 16%;
+    width: 35%; //This value doesn't really matter and will be removed because the width is controlled by the power level.
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 5;
 }
 
 .cardContentSchematicAttributes {
@@ -45,6 +57,15 @@
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 1;
         clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%);
+    }
+
+    .assetImage {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .schematicClass {
@@ -341,6 +362,36 @@
     width: 100%;
     background: rgb(189, 73, 19);
     background: linear-gradient(90deg, rgba(189, 73, 19, 1) 0%, rgba(232, 129, 76, 1) 50%, rgba(255, 195, 157, 1) 100%);
+    position: relative;
+
+    .levelBar {
+        position: absolute;
+        top: 3.5%;
+        $width: 100%;
+        padding: 0 calc(3% / 2);
+        width: $width;
+        height: 20%;
+        background-color: black;
+        background-clip: content-box;
+    }
+
+    .starContainer {
+        position: absolute;
+        height: 36%;
+        width: 100%;
+        bottom: 3.5%;
+        left: 0;
+        padding: 0 5%;
+        display: flex;
+        gap: 1.5%;
+
+        .star {
+            clip-path: polygon(50% 0%, 65% 35%, 98% 35%, 75% 65%, 85% 100%, 50% 80%, 15% 100%, 25% 65%, 2% 35%, 35% 35%);
+            height: 100%;
+            width: 12.5%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
 }
 
 @keyframes holographic {
